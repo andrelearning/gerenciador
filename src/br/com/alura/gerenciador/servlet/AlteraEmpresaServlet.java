@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.alura.gerenciador.model.Banco;
+import br.com.alura.gerenciador.model.Empresa;
+
 /**
  * Servlet implementation class AlteraEmpresaServlet
  */
@@ -40,7 +43,7 @@ public class AlteraEmpresaServlet extends HttpServlet {
 		novaEmpresa.setDataAbertura(dtEmpresa);
 		banco.alteraEmpresa(novaEmpresa);
 		
-		response.sendRedirect("listaEmpresas");
+		response.sendRedirect("entrada?acao=ListaEmpresas");
 
 	}
 
